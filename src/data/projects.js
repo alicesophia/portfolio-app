@@ -14,14 +14,14 @@ const PROJECTS = [
   {
     id: 2,
     title: "SalesWeb MVC",
-    description: "A complete ASP.NET web page using MVC, Entity Framework and MySQL",
+    description: "ASP.NET CRUD application using MVC, Entity Framework and MySQL",
     link: "https://github.com/alicesophia/salesweb-mvc",
     image: project2
   },
   {
     id: 3,
     title: "Chess game",
-    description: "A Chess game made with C# using the core principles of POO",
+    description: "Console Chess game made with C# using the core principles of POO",
     link: "https://github.com/alicesophia/xadrez-console",
     image: project3
   },
@@ -29,7 +29,7 @@ const PROJECTS = [
     id: 4,
     title: "Others",
     description: "See all the other cool projects I've built",
-    link: "https://github.com/alicesophia",
+    link: "https://github.com/alicesophia?tab=repositories",
     image: project4
   }
 ];
