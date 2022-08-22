@@ -2,14 +2,9 @@ import React, {Component} from "react";
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {displayBio: false};
+  state = {displayBio: false};
 
-    this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
-  }
-
-  toggleDisplayBio() {
+  toggleDisplayBio = () => {
     this.setState({displayBio: !this.state.displayBio});
   }
 
@@ -23,7 +18,7 @@ class App extends Component {
           this.state.displayBio ? (
             <div>
               <p>I live in São Paulo, and code every day.</p>
-              <p>My favorite language is Python, and I love .NET and JavaScript too :)</p>
+              <p>My favorite language is Python but I love .NET and JavaScript too :)</p>
               <p>Besides coding, I also love games and anime. My favourite game is Final Fantasy, and my favourite anime is One Piece.</p>
               <button onClick={this.toggleDisplayBio}>Show less</button>
             </div>
