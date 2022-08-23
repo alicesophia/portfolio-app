@@ -1,7 +1,6 @@
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
-import project4 from "../assets/project3.png";
 
 const PROJECTS = [
   {
@@ -21,16 +20,9 @@ const PROJECTS = [
   {
     id: 3,
     title: "Chess game",
-    description: "Console Chess game made with C# using the core principles of POO",
+    description: "Console Chess game made with C# using all the principles of POO",
     link: "https://github.com/alicesophia/xadrez-console",
     image: project3
-  },
-  {
-    id: 4,
-    title: "Others",
-    description: "See all the other cool projects I've built",
-    link: "https://github.com/alicesophia?tab=repositories",
-    image: project4
   }
 ];
 
