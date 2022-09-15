@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import Projects from "./Projects";
 import SocialProfiles from "./SocialProfiles";
 import Title from "./Title";
+import Facts from "./Facts";
 import profile from "../assets/profile.png";
 
 class App extends Component {
-
   state = {displayBio: false};
 
   toggleDisplayBio = () => {
@@ -18,7 +18,7 @@ class App extends Component {
         <img src={profile} alt="profile" className="profile"/>
         <h1>Hello!</h1>
         <p>My name is Alice.</p>
-        <Title/>
+        <Title />
         <p>I'm always looking forward to learning interesting and different technologies.</p>
         {
           this.state.displayBio ? (
@@ -35,9 +35,11 @@ class App extends Component {
           )
         }
         <hr/>
-        <Projects/>
+        <Projects />
         <hr/>
-        <SocialProfiles/>
+        <SocialProfiles />
+        <hr/>
+        <Facts />
       </div>
     )
   }
