@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./Header";
 
 const Fact = ({ facts: { fact } }) => {
   return <p style={{margin: 20 }}>{fact}</p>;
@@ -34,7 +33,6 @@ class Facts extends Component {
 
     return (
       <div>
-        <Header />
         <h2>One Piece fact</h2>
         <img src={img} style={{ height: 400 }}/>
         <Fact facts={this.state.fact}/>
