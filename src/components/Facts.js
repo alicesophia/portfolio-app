@@ -5,10 +5,15 @@ const Fact = ({ facts: { fact } }) => {
 }
 
 class Facts extends Component {
-  state = { fact: {}, facts: [] };
+  state = { img: {}, fact: {}, facts: [] };
 
   componentDidMount() {
-    fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/one_piece/1")
+    fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/one_piece")
+      .then(response => response.json())
+      .then(json => this.setState({ img: json }))
+      .catch(error => alert(error.message));
+
+    fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/one_piece/" + (Math.floor(Math.random() * 25) + 1))
       .then(response => response.json())
       .then(response => response.data)
       .then(json => this.setState({ fact: json}))
@@ -24,9 +29,12 @@ class Facts extends Component {
   }
 
   render() {
+    const { img } = this.state.img;
+
     return (
       <div>
         <h2>One Piece fact</h2>
+        <img src={img} style={{ height: 400 }}/>
         <Fact facts={this.state.fact}/>
         <br/>
         <h3>Want more facts?</h3>
