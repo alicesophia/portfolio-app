@@ -11,14 +11,16 @@ class Facts extends Component {
     fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/one_piece/1")
       .then(response => response.json())
       .then(response => response.data)
-      .then(json => this.setState({ fact: json}));
+      .then(json => this.setState({ fact: json}))
+      .catch(error => alert(error.message));
   }
 
   fetchFacts = () => {
     fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/one_piece")
       .then(response => response.json())
       .then(response => response.data)
-      .then(json => this.setState({ facts: json }));
+      .then(json => this.setState({ facts: json }))
+      .catch(error => alert(error.message));;
   }
 
   render() {
