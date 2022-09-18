@@ -17,6 +17,12 @@ const Header = ({ children }) => {
         <h3 style={style}>
           <Link to="/facts">One Piece facts</Link>
         </h3>
+        <h3 style={style}>
+          <Link to="/artist-finder">Artist Finder</Link>
+        </h3>
+        <h3 style={style}>
+          <Link to="/cards-search">Hearthstone Cards Search</Link>
+        </h3>
       </div>
       {children}
     </div>
